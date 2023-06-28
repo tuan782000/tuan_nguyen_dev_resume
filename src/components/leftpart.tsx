@@ -1,36 +1,141 @@
-const LeftPart = () => {
+import { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
+
+interface IProps {
+    hideLeftPart: boolean;
+    setHideLeftPart: (value: boolean) => void;
+}
+const LeftPart = (props: IProps) => {
+    const [activeTab, setActiveTab] = useState<string>("home");
+    useEffect(() => {
+        const { hash } = window.location;
+
+        if (hash) {
+            const tab = hash.replace("#", "");
+            setActiveTab(tab);
+            const section = document.querySelector(`${hash}`);
+            if (section)
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }, []);
+
+    const handleClickTab = (
+        tab: string,
+        event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    ) => {
+        event.preventDefault();
+        setActiveTab(tab);
+        const section = document.querySelector(`#${tab}`);
+        if (section)
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+        setTimeout(() => {
+            window.location.hash = tab;
+        }, 1000);
+    };
+
     return (
         <>
-            <div className="arlo_tm_leftpart_wrap">
+            <div
+                className={
+                    props.hideLeftPart === true
+                        ? "arlo_tm_leftpart_wrap opened"
+                        : "arlo_tm_leftpart_wrap"
+                }
+            >
                 <div className="leftpart_inner">
                     <div className="logo_wrap">
-                        <a href="#">
-                            <img
-                                src="img/logo/desktop-logo.png"
-                                alt="desktop-logo"
-                            />
-                        </a>
+                        {/* <a href="#">
+                            <img src={desktopLogo} alt="desktop-logo" />
+                        </a> */}
                     </div>
                     <div className="menu_list_wrap">
                         <ul className="anchor_nav">
                             <li>
-                                <a href="#home">Home</a>
+                                <a
+                                    href="#home"
+                                    className={
+                                        activeTab === "home" ? "active" : ""
+                                    }
+                                    onClick={(
+                                        event: React.MouseEvent<
+                                            HTMLAnchorElement,
+                                            MouseEvent
+                                        >
+                                    ) => handleClickTab("home", event)}
+                                >
+                                    Home
+                                </a>
                             </li>
                             <li>
-                                <a href="#about">About</a>
+                                <a
+                                    href="#about"
+                                    className={
+                                        activeTab === "about" ? "active" : ""
+                                    }
+                                    onClick={(
+                                        event: React.MouseEvent<
+                                            HTMLAnchorElement,
+                                            MouseEvent
+                                        >
+                                    ) => handleClickTab("about", event)}
+                                >
+                                    About
+                                </a>
                             </li>
                             <li>
-                                <a href="#services">Services</a>
+                                <a
+                                    href="#skills"
+                                    className={
+                                        activeTab === "skills" ? "active" : ""
+                                    }
+                                    onClick={(
+                                        event: React.MouseEvent<
+                                            HTMLAnchorElement,
+                                            MouseEvent
+                                        >
+                                    ) => handleClickTab("skills", event)}
+                                >
+                                    Skills
+                                </a>
                             </li>
                             <li>
-                                <a href="#portfolio">Portfolio</a>
+                                <a
+                                    href="#project"
+                                    className={
+                                        activeTab === "project" ? "active" : ""
+                                    }
+                                    onClick={(
+                                        event: React.MouseEvent<
+                                            HTMLAnchorElement,
+                                            MouseEvent
+                                        >
+                                    ) => handleClickTab("project", event)}
+                                >
+                                    Projects
+                                </a>
                             </li>
                             <li>
+                                <a
+                                    href="#contact"
+                                    className={
+                                        activeTab === "contact" ? "active" : ""
+                                    }
+                                    onClick={(
+                                        event: React.MouseEvent<
+                                            HTMLAnchorElement,
+                                            MouseEvent
+                                        >
+                                    ) => handleClickTab("contact", event)}
+                                >
+                                    Contact
+                                </a>
+                            </li>
+                            {/* <li>
                                 <a href="#news">News</a>
                             </li>
                             <li>
                                 <a href="#contact">Contact</a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div className="leftpart_bottom">
@@ -64,9 +169,28 @@ const LeftPart = () => {
                             </ul>
                         </div>
                     </div>
-                    <a className="arlo_tm_resize" href="#">
-                        <i className="xcon-angle-left"></i>
-                    </a>
+                    {!isMobile && (
+                        <a
+                            className={
+                                props.hideLeftPart
+                                    ? "arlo_tm_resize opened"
+                                    : "arlo_tm_resize"
+                            }
+                            href="#"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                props.setHideLeftPart(!props.hideLeftPart);
+                            }}
+                        >
+                            <i
+                                className={
+                                    props.hideLeftPart
+                                        ? "xcon-angle-left opened"
+                                        : "xcon-angle-left"
+                                }
+                            ></i>
+                        </a>
+                    )}
                 </div>
             </div>
         </>

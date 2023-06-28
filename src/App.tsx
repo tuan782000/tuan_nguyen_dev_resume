@@ -1,7 +1,7 @@
-import Portfolio from "./screens/portfolio";
+import Portfolio from "@/screens/portfolio";
 // import "./styles/test.scss";
-import "./styles/plugins.scss";
-import "./styles/style.scss";
+import "@/styles/plugins.scss";
+import "@/styles/style.scss";
 
 function App() {
     return <Portfolio />;

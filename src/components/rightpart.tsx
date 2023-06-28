@@ -1,488 +1,47 @@
+import About from "./content/about";
+import Contact from "./content/contact";
 import HomeCV from "./content/homecv";
+import Project from "./content/project";
+import Skill from "./content/skill";
 
-const RightPart = () => {
+interface IProps {
+    hideLeftPart: boolean;
+    setHideLeftPart: (value: boolean) => void;
+}
+
+const RightPart = (props: IProps) => {
     return (
         <>
-            <div className="arlo_tm_rightpart">
+            <div
+                className={
+                    props.hideLeftPart === true
+                        ? "arlo_tm_rightpart opened"
+                        : "arlo_tm_rightpart"
+                }
+            >
                 <div className="rightpart_inner">
-                   {/* Home */}
-                   <HomeCV />
-                   {/* /Home */}
+                    {/* Home */}
+                    <HomeCV />
+                    {/* /Home */}
 
                     {/* <!-- ABOUT --> */}
-                    <div className="arlo_tm_section relative" id="about">
-                        <div className="arlo_tm_about_wrapper_all">
-                            <div className="container">
-                                <div className="arlo_tm_title_holder">
-                                    <h3>About Me</h3>
-                                    <span>Main informations about me</span>
-                                </div>
-                                <div className="arlo_tm_about_wrap">
-                                    <div className="author_wrap">
-                                        <div className="leftbox">
-                                            <div
-                                                className="about_image_wrap parallax"
-                                                data-relative-input="true"
-                                            >
-                                                <div
-                                                    className="image layer"
-                                                    data-depth="0.1"
-                                                >
-                                                    <img
-                                                        src="img/about/550x640.jpg"
-                                                        alt="550x640"
-                                                    />
-                                                    <div
-                                                        className="inner"
-                                                        data-img-url="img/about/1.jpg"
-                                                    ></div>
-                                                </div>
-                                                <div
-                                                    className="border layer"
-                                                    data-depth="0.2"
-                                                >
-                                                    <img
-                                                        src="img/about/550x640.jpg"
-                                                        alt="550x640"
-                                                    />
-                                                    <div className="inner"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="rightbox">
-                                            <div className="arlo_tm_mini_title_holder">
-                                                <h4>
-                                                    I'm Alan Michaelis and{" "}
-                                                    <span className="arlo_tm_animation_text_word"></span>
-                                                </h4>
-                                            </div>
-                                            <div className="definition">
-                                                <p>
-                                                    Hi! My name is{" "}
-                                                    <strong>
-                                                        Alan Michaelis
-                                                    </strong>
-                                                    . I am a Web Developer, and
-                                                    I'm very passionate and
-                                                    dedicated to my work. With
-                                                    20 years experience as a
-                                                    professional Web developer,
-                                                    I have acquired the skills
-                                                    and knowledge necessary to
-                                                    make your project a success.
-                                                    I enjoy every step of the
-                                                    design process, from
-                                                    discussion and collaboration
-                                                    to concept and execution,
-                                                    but I find the most
-                                                    satisfaction in seeing the
-                                                    finished product do
-                                                    everything for you that it
-                                                    was created to do.
-                                                </p>
-                                            </div>
-                                            <div className="about_short_contact_wrap">
-                                                <ul>
-                                                    <li>
-                                                        <span>
-                                                            <label>
-                                                                Birthday:
-                                                            </label>{" "}
-                                                            01.07.1990
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <label>Age:</label>{" "}
-                                                            28
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <label>City:</label>{" "}
-                                                            New York, USA
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <label>
-                                                                Interests:
-                                                            </label>{" "}
-                                                            Soccer, UFC
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <label>
-                                                                Study:
-                                                            </label>{" "}
-                                                            Chicago University
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <label>
-                                                                Degree:
-                                                            </label>{" "}
-                                                            Master
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <label>
-                                                                Website:
-                                                            </label>{" "}
-                                                            <a href="#">
-                                                                www.mywebsite.com
-                                                            </a>
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <label>Mail:</label>{" "}
-                                                            <a href="mailto:example@gmail.com">
-                                                                mymail&#64;gmail.com
-                                                            </a>
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <label>
-                                                                Phone:
-                                                            </label>{" "}
-                                                            <a href="#">
-                                                                +77 022 177 05
-                                                                05
-                                                            </a>
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <span>
-                                                            <label>
-                                                                Twitter:
-                                                            </label>{" "}
-                                                            <a href="#">
-                                                                &#64;myusername
-                                                            </a>
-                                                        </span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div className="buttons_wrap">
-                                                <ul>
-                                                    <li>
-                                                        <a href="index.html">
-                                                            <span>
-                                                                Download CV
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li className="anchor">
-                                                        <a href="#contact">
-                                                            <span>
-                                                                Send Message
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <About />
                     {/* <!-- /ABOUT --> */}
 
                     {/* <!-- SKILLS --> */}
-                    <div className="arlo_tm_section">
-                        <div className="arlo_tm_skills_wrap">
-                            <div className="container">
-                                <div className="inner_wrap">
-                                    <div className="leftbox">
-                                        <div className="arlo_tm_mini_title_holder">
-                                            <h4>Some About my Abilities</h4>
-                                        </div>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of
-                                            the printing and typesetting
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text ever
-                                            since. Lorem Ipsum has been the
-                                            industry. Lorem Ipsum has been the
-                                            industry's standard dummy text
-                                            since. Lorem Ipsum is simply.
-                                        </p>
-                                    </div>
-                                    <div className="rightbox">
-                                        <div className="progress_bar_wrap_total">
-                                            <div
-                                                className="arlo_tm_progress_wrap"
-                                                data-size="small"
-                                                data-round="c"
-                                                data-strip="off"
-                                            >
-                                                <div
-                                                    className="arlo_tm_progress"
-                                                    data-value="95"
-                                                    data-color="#000"
-                                                >
-                                                    <span>
-                                                        <span className="label">
-                                                            Wordpress -{" "}
-                                                            <span className="experience">
-                                                                5 years of
-                                                                experience
-                                                            </span>
-                                                        </span>
-                                                        <span className="number">
-                                                            95%
-                                                        </span>
-                                                    </span>
-                                                    <div className="arlo_tm_bar_bg">
-                                                        <div className="arlo_tm_bar_wrap">
-                                                            <div className="arlo_tm_bar"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="arlo_tm_progress"
-                                                    data-value="85"
-                                                    data-color="#000"
-                                                >
-                                                    <span>
-                                                        <span className="label">
-                                                            Css -{" "}
-                                                            <span className="experience">
-                                                                3 years of
-                                                                experience
-                                                            </span>
-                                                        </span>
-                                                        <span className="number">
-                                                            85%
-                                                        </span>
-                                                    </span>
-                                                    <div className="arlo_tm_bar_bg">
-                                                        <div className="arlo_tm_bar_wrap">
-                                                            <div className="arlo_tm_bar"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="arlo_tm_progress"
-                                                    data-value="75"
-                                                    data-color="#000"
-                                                >
-                                                    <span>
-                                                        <span className="label">
-                                                            HTML -{" "}
-                                                            <span className="experience">
-                                                                4 years of
-                                                                experience
-                                                            </span>
-                                                        </span>
-                                                        <span className="number">
-                                                            75%
-                                                        </span>
-                                                    </span>
-                                                    <div className="arlo_tm_bar_bg">
-                                                        <div className="arlo_tm_bar_wrap">
-                                                            <div className="arlo_tm_bar"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    className="arlo_tm_progress"
-                                                    data-value="90"
-                                                    data-color="#000"
-                                                >
-                                                    <span>
-                                                        <span className="label">
-                                                            After Effect -{" "}
-                                                            <span className="experience">
-                                                                6 years of
-                                                                experience
-                                                            </span>
-                                                        </span>
-                                                        <span className="number">
-                                                            90%
-                                                        </span>
-                                                    </span>
-                                                    <div className="arlo_tm_bar_bg">
-                                                        <div className="arlo_tm_bar_wrap">
-                                                            <div className="arlo_tm_bar"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Skill />
+
                     {/* <!-- /SKILLS --> */}
 
                     {/* <!-- SERVICES --> */}
-                    <div className="arlo_tm_section" id="services">
-                        <div className="arlo_tm_services_wrap">
-                            <div className="container">
-                                <div className="arlo_tm_title_holder">
-                                    <h3>Amazing Services</h3>
-                                    <span>Meet our amazing services</span>
-                                </div>
-                                <div className="list_wrap">
-                                    <ul>
-                                        <li>
-                                            <div className="inner">
-                                                <div className="icon">
-                                                    <img
-                                                        className="svg"
-                                                        src="img/svg/camera-diaphragm.svg"
-                                                        alt="camera-diaphragm"
-                                                    />
-                                                </div>
-                                                <div className="title_service">
-                                                    <h3>Photography</h3>
-                                                </div>
-                                                <div className="text">
-                                                    <p>
-                                                        Web design is a similar
-                                                        process of creation,
-                                                        with the intention of
-                                                        presenting the content
-                                                        on electronic pages ...
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="inner">
-                                                <div className="icon">
-                                                    <img
-                                                        className="svg"
-                                                        src="img/svg/new-tab.svg"
-                                                        alt="new-tab"
-                                                    />
-                                                </div>
-                                                <div className="title_service">
-                                                    <h3>Web Design</h3>
-                                                </div>
-                                                <div className="text">
-                                                    <p>
-                                                        Web design is a similar
-                                                        process of creation,
-                                                        with the intention of
-                                                        presenting the content
-                                                        on electronic pages ...
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="inner">
-                                                <div className="icon">
-                                                    <img
-                                                        className="svg"
-                                                        src="img/svg/layers.svg"
-                                                        alt="layers"
-                                                    />
-                                                </div>
-                                                <div className="title_service">
-                                                    <h3>Branding</h3>
-                                                </div>
-                                                <div className="text">
-                                                    <p>
-                                                        Web design is a similar
-                                                        process of creation,
-                                                        with the intention of
-                                                        presenting the content
-                                                        on electronic pages ...
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="inner">
-                                                <div className="icon">
-                                                    <img
-                                                        className="svg"
-                                                        src="img/svg/share.svg"
-                                                        alt="share"
-                                                    />
-                                                </div>
-                                                <div className="title_service">
-                                                    <h3>Social Media</h3>
-                                                </div>
-                                                <div className="text">
-                                                    <p>
-                                                        Web design is a similar
-                                                        process of creation,
-                                                        with the intention of
-                                                        presenting the content
-                                                        on electronic pages ...
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="inner">
-                                                <div className="icon">
-                                                    <img
-                                                        className="svg"
-                                                        src="img/svg/adobe-illustrator.svg"
-                                                        alt="adobe-illustrator"
-                                                    />
-                                                </div>
-                                                <div className="title_service">
-                                                    <h3>Illustrator</h3>
-                                                </div>
-                                                <div className="text">
-                                                    <p>
-                                                        Web design is a similar
-                                                        process of creation,
-                                                        with the intention of
-                                                        presenting the content
-                                                        on electronic pages ...
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="inner">
-                                                <div className="icon">
-                                                    <img
-                                                        className="svg"
-                                                        src="img/svg/seo-performance-marketing-graphic.svg"
-                                                        alt="seo-performance-marketing-graphic"
-                                                    />
-                                                </div>
-                                                <div className="title_service">
-                                                    <h3>Marketing</h3>
-                                                </div>
-                                                <div className="text">
-                                                    <p>
-                                                        Web design is a similar
-                                                        process of creation,
-                                                        with the intention of
-                                                        presenting the content
-                                                        on electronic pages ...
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Project />
                     {/* <!-- /SERVICES --> */}
 
                     {/* <!-- PORTFOLIO --> */}
-                    <div className="arlo_tm_section relative" id="portfolio">
+                    {/* <div className="arlo_tm_section relative" id="portfolio">
                         <div className="arlo_tm_portfolio_wrapper_all">
                             {/* <!-- PORTFOLIO FILTER --> */}
-                            <div className="arlo_tm_second_portfolio">
+                    {/* <div className="arlo_tm_second_portfolio">
                                 <div className="container">
                                     <div className="arlo_tm_portfolio_wrap">
                                         <div className="arlo_tm_title_holder portfolio">
@@ -640,14 +199,14 @@ const RightPart = () => {
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                            {/* <!-- /PORTFOLIO FILTER --> */}
-                        </div>
-                    </div>
+                            </div> */}
+                    {/* <!-- /PORTFOLIO FILTER --> */}
+                    {/* </div> */}
+                    {/* </div> */}
                     {/* <!-- /PORTFOLIO --> */}
 
                     {/* <!-- TESTIMONIALS --> */}
-                    <div className="arlo_tm_section" id="testimonials">
+                    {/* <div className="arlo_tm_section" id="testimonials">
                         <div className="arlo_tm_testimonials_wrapper_all">
                             <div className="arlo_tm_universal_box_wrap">
                                 <div className="bg_wrap">
@@ -755,11 +314,11 @@ const RightPart = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     {/* <!-- /TESTIMONIALS --> */}
 
                     {/* <!-- COUNTERBOX --> */}
-                    <div className="arlo_tm_section">
+                    {/* <div className="arlo_tm_section">
                         <div className="container">
                             <div
                                 className="arlo_tm_counter_wrap"
@@ -840,11 +399,11 @@ const RightPart = () => {
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     {/* <!-- /COUNTERBOX --> */}
 
                     {/* <!-- NEWS --> */}
-                    <div className="arlo_tm_section" id="news">
+                    {/* <div className="arlo_tm_section" id="news">
                         <div className="arlo_tm_news_wrap">
                             <div className="container">
                                 <div className="arlo_tm_title_holder news">
@@ -1447,131 +1006,11 @@ const RightPart = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     {/* <!-- /NEWS --> */}
 
                     {/* <!-- CONTACT & FOOTER --> */}
-                    <div className="arlo_tm_section" id="contact">
-                        <div className="container">
-                            <div className="arlo_tm_title_holder contact">
-                                <h3>Contact Me</h3>
-                                <span>Get in touch with me</span>
-                            </div>
-                        </div>
-                        <div className="arlo_tm_footer_contact_wrapper_all">
-                            <div className="arlo_tm_contact_wrap_all">
-                                <div className="container">
-                                    <div className="leftbox">
-                                        <div className="arlo_tm_mini_title_holder contact">
-                                            <h4>Get in Touch</h4>
-                                        </div>
-                                        <div className="short_info_wrap">
-                                            <ul>
-                                                <li>
-                                                    <p>
-                                                        <label>Address:</label>
-                                                        <span>
-                                                            123 Qwerty Avenue
-                                                            NYC, USA
-                                                        </span>
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <p>
-                                                        <label>Email:</label>
-                                                        <span>
-                                                            <a href="mailto:example@gmail.com">
-                                                                example@gmail.com
-                                                            </a>
-                                                        </span>
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <p>
-                                                        <label>Phone:</label>
-                                                        <span>
-                                                            +77 022 177 05 05
-                                                        </span>
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <p>
-                                                        <label>Website:</label>
-                                                        <span>
-                                                            <a href="mailto:example@gmail.com">
-                                                                www.yourdomain.com
-                                                            </a>
-                                                        </span>
-                                                    </p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="rightbox">
-                                        <div className="arlo_tm_contact_wrap">
-                                            <div className="main_input_wrap">
-                                                <form
-                                                    action="http://frenify.com/"
-                                                    method="post"
-                                                    className="contact_form"
-                                                    id="contact_form"
-                                                >
-                                                    <div
-                                                        className="returnmessage"
-                                                        data-success="Your message has been received, We will contact you soon."
-                                                    ></div>
-                                                    <div className="empty_notice">
-                                                        <span>
-                                                            Please Fill Required
-                                                            Fields
-                                                        </span>
-                                                    </div>
-                                                    <div className="wrap">
-                                                        <input
-                                                            id="name"
-                                                            type="text"
-                                                            placeholder="Your Name"
-                                                        />
-                                                    </div>
-                                                    <div className="wrap">
-                                                        <input
-                                                            id="email"
-                                                            type="text"
-                                                            placeholder="Your Email"
-                                                        />
-                                                    </div>
-                                                    <div className="wrap">
-                                                        <textarea
-                                                            id="message"
-                                                            placeholder="Your Message"
-                                                        ></textarea>
-                                                    </div>
-                                                    <div className="arlo_tm_button">
-                                                        <a
-                                                            id="send_message"
-                                                            href="#"
-                                                        >
-                                                            <span>
-                                                                Send Message
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="arlo_tm_footer_wrap">
-                                <div className="container">
-                                    <p>
-                                        &copy; Copyright 2019. All Rights are
-                                        Reserved.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Contact />
                     {/* <!-- /CONTACT & FOOTER --> */}
                 </div>
             </div>

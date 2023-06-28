@@ -11,12 +11,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/parallax-js": "3.1.0",
+    "antd": "5.4.6",
+    "parallax-js": "3.1.0",
     "react": "^18.2.0",
+    "react-device-detect": "2.2.3",
     "react-dom": "^18.2.0",
+    "react-icons": "4.8.0",
     "react-type-animation": "3.0.1",
     "sass": "1.62.1"
   },
   "devDependencies": {
+    "@types/node": "18.16.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
@@ -25,6 +31,7 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "rollup-plugin-visualizer": "^5.9.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"
   }

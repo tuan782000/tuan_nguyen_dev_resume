@@ -1,34 +1,34 @@
 $color_1: #333;
 $color_2: #fff;
-$color_3: #E3872D;
+$color_3: #e3872d;
 $color_4: #041230;
 $color_5: #000;
-$color_6: #BD0A0D;
+$color_6: #bd0a0d;
 $color_7: #000000;
 $color_8: #181a2f;
 $color_9: #666;
-$color_10: rgba(255, 0, 4, 1.00);
-$color_11: #0064FF;
-$color_12: #FFFFFF;
-$color_13: #BC0127;
+$color_10: rgba(255, 0, 4, 1);
+$color_11: #0064ff;
+$color_12: #ffffff;
+$color_13: #bc0127;
 $color_14: inherit;
 $font-family_1: "Open Sans";
 $font-family_2: "Montserrat";
 $background-color_1: #fff;
 $background-color_2: #041230;
-$background-color_3: #E3872D;
-$background-color_4: rgba(7, 23, 55, .8);
+$background-color_3: #e3872d;
+$background-color_4: rgba(7, 23, 55, 0.8);
 $background-color_5: #f6f7fd;
 $background-color_6: #d1d7db;
 $background-color_7: #333;
 $background-color_8: rgba(255, 255, 255, 1);
-$background-color_9: rgba(0, 0, 0, 1.00);
+$background-color_9: rgba(0, 0, 0, 1);
 $background-color_10: transparent;
-$background-color_11: rgba(10, 4, 37, .85);
+$background-color_11: rgba(10, 4, 37, 0.85);
 $background-color_12: #fd4d4d;
-$background-color_13: #BC0127;
+$background-color_13: #bc0127;
 $background-color_14: #333333;
-$background-color_15: rgba(4, 18, 48, .97);
+$background-color_15: rgba(4, 18, 48, 0.97);
 $border-bottom-color_1: #fff;
 
 /*@charset "utf-8";*/
@@ -63,7 +63,6 @@ $border-bottom-color_1: #fff;
 /*	02) ARLO CONTENT
 /*---------------------------------------------------*/
 @-webkit-keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -85,7 +84,6 @@ $border-bottom-color_1: #fff;
 }
 
 @keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -231,6 +229,13 @@ svg {
     height: 15px;
 }
 
+.icon {
+    svg {
+        width: unset;
+        height: unset;
+    }
+}
+
 img.svg {
     width: 15px;
     height: 15px;
@@ -305,12 +310,12 @@ img.svg {
     z-index: 9999999;
     height: 100%;
     width: 100%;
-    -webkit-transition: .2s all ease;
-    -o-transition: .2s all ease;
-    transition: .2s all ease;
-    -webkit-transition-delay: .5s;
-    -o-transition-delay: .5s;
-    transition-delay: .5s;
+    -webkit-transition: 0.2s all ease;
+    -o-transition: 0.2s all ease;
+    transition: 0.2s all ease;
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
 
     .spinner_wrap {
         position: absolute;
@@ -326,9 +331,9 @@ img.svg {
         height: 50%;
         width: 100%;
         background-color: $background-color_2;
-        -webkit-transition: .7s all ease;
-        -o-transition: .7s all ease;
-        transition: .7s all ease;
+        -webkit-transition: 0.7s all ease;
+        -o-transition: 0.7s all ease;
+        transition: 0.7s all ease;
         top: 0;
         left: 0;
     }
@@ -339,9 +344,9 @@ img.svg {
         height: 50%;
         width: 100%;
         background-color: $background-color_2;
-        -webkit-transition: .7s all ease;
-        -o-transition: .7s all ease;
-        transition: .7s all ease;
+        -webkit-transition: 0.7s all ease;
+        -o-transition: 0.7s all ease;
+        transition: 0.7s all ease;
         bottom: 0;
         left: 0;
     }
@@ -368,11 +373,11 @@ img.svg {
     left: 0px;
     background-color: $background-color_2;
     z-index: 100;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 
     .logo_wrap {
         background-color: $background-color_2;
@@ -381,7 +386,7 @@ img.svg {
         float: left;
         text-align: center;
         margin-bottom: 50px;
-        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -418,11 +423,11 @@ img.svg {
                     position: relative;
                     display: inline-block;
                     padding-bottom: 19px;
-                    -webkit-transition: all .3s ease;
-                    -moz-transition: all .3s ease;
-                    -ms-transition: all .3s ease;
-                    -o-transition: all .3s ease;
-                    transition: all .3s ease;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -ms-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
 
                     &:before {
                         position: absolute;
@@ -434,11 +439,11 @@ img.svg {
                         transform: translateY(-50%);
                         left: 100%;
                         margin-left: 10px;
-                        -webkit-transition: all .3s ease;
-                        -moz-transition: all .3s ease;
-                        -ms-transition: all .3s ease;
-                        -o-transition: all .3s ease;
-                        transition: all .3s ease;
+                        -webkit-transition: all 0.3s ease;
+                        -moz-transition: all 0.3s ease;
+                        -ms-transition: all 0.3s ease;
+                        -o-transition: all 0.3s ease;
+                        transition: all 0.3s ease;
                     }
 
                     &:hover {
@@ -447,6 +452,10 @@ img.svg {
                         &:before {
                             width: 35px;
                         }
+                    }
+
+                    &.active {
+                        color: $color_3;
                     }
                 }
             }
@@ -484,11 +493,11 @@ img.svg {
                     a {
                         text-decoration: none;
                         color: $color_2;
-                        -webkit-transition: all .3s ease;
-                        -moz-transition: all .3s ease;
-                        -ms-transition: all .3s ease;
-                        -o-transition: all .3s ease;
-                        transition: all .3s ease;
+                        -webkit-transition: all 0.3s ease;
+                        -moz-transition: all 0.3s ease;
+                        -ms-transition: all 0.3s ease;
+                        -o-transition: all 0.3s ease;
+                        transition: all 0.3s ease;
 
                         &:hover {
                             color: $color_3;
@@ -511,22 +520,22 @@ img.svg {
         display: inline-block;
         text-decoration: none;
         z-index: 200;
-        -webkit-transition: all .3s ease;
-        -moz-transition: all .3s ease;
-        -ms-transition: all .3s ease;
-        -o-transition: all .3s ease;
-        transition: all .3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
 
         i {
             color: $color_2;
             transform: rotate(0deg);
             position: absolute;
             left: 6px;
-            -webkit-transition: all .3s ease;
-            -moz-transition: all .3s ease;
-            -ms-transition: all .3s ease;
-            -o-transition: all .3s ease;
-            transition: all .3s ease;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         i.opened {
@@ -552,11 +561,11 @@ img.svg {
     height: auto;
     float: left;
     padding-left: 300px;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -585,7 +594,7 @@ img.svg {
     height: auto;
     clear: both;
     float: left;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -612,7 +621,7 @@ img.svg {
 
         img {
             border-radius: 100%;
-            border: 8px solid rgba(255, 255, 255, .5);
+            border: 8px solid rgba(255, 255, 255, 0.5);
         }
     }
 
@@ -770,7 +779,7 @@ img.svg {
     }
 
     .overlay_image.hero {
-        background-image: url(../img/hero/2.jpg);
+        background-image: url(../assets/img/hero/2.jpg);
     }
 
     .overlay_color.hero {
@@ -782,7 +791,7 @@ img.svg {
     }
 
     .overlay_image.testimonial {
-        background-image: url(../img/hero/3.jpg);
+        background-image: url(../assets/img/hero/3.jpg);
     }
 
     .overlay_color.testimonial {
@@ -935,11 +944,11 @@ img.svg {
                     text-decoration: none;
                     color: $color_5;
                     position: relative;
-                    -webkit-transition: all .3s ease;
-                    -moz-transition: all .3s ease;
-                    -ms-transition: all .3s ease;
-                    -o-transition: all .3s ease;
-                    transition: all .3s ease;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -ms-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
 
                     &:hover {
                         color: $color_6;
@@ -1000,7 +1009,7 @@ img.svg {
                         width: 0%;
                         background-color: $background-color_2;
                         transform: skew(50deg);
-                        transition-duration: .6s;
+                        transition-duration: 0.6s;
                         z-index: 1;
                     }
 
@@ -1060,7 +1069,7 @@ img.svg {
         font-size: 50px;
         text-transform: uppercase;
         font-weight: 600;
-        letter-spacing: -.5px;
+        letter-spacing: -0.5px;
         padding-left: 25px;
         line-height: 1;
     }
@@ -1184,8 +1193,12 @@ img.svg {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: $background-color_5;
-    padding: 90px 0px;
-    margin-bottom: 100px;
+    // padding: 90px 0px;
+    padding-top: 90px;
+    &:last-child {
+        padding-bottom: 90px;
+        margin-bottom: 100px;
+    }
 
     .inner_wrap {
         width: 100%;
@@ -1199,7 +1212,7 @@ img.svg {
     }
 
     .leftbox {
-        width: 35%;
+        width: 50%;
         height: auto;
         clear: both;
         float: left;
@@ -1306,7 +1319,7 @@ img.svg {
         margin-bottom: 0px;
     }
 
-    >span {
+    > span {
         margin: 0px 0px 3px 0px;
         width: 100%;
         display: block;
@@ -1334,7 +1347,7 @@ img.svg {
     }
 
     .arlo_tm_bar_bg {
-        background: rgba(0, 0, 0, .1);
+        background: rgba(0, 0, 0, 0.1);
         width: 100%;
         min-width: 100%;
         position: relative;
@@ -1346,9 +1359,10 @@ img.svg {
         }
 
         .arlo_tm_bar_wrap.open {
-            -webkit-animation: arlo_tm_expand 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-            -moz-animation: arlo_tm_expand 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
-            animation: arlo_tm_expand 3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+            -webkit-animation: arlo_tm_expand 3s
+                cubic-bezier(0.165, 0.84, 0.44, 1);
+            -moz-animation: arlo_tm_expand 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation: arlo_tm_expand 3s cubic-bezier(0.165, 0.84, 0.44, 1);
             width: 100%;
         }
 
@@ -1364,7 +1378,16 @@ img.svg {
 .arlo_tm_progress_wrap[data-strip="on"] {
     .arlo_tm_progress {
         .arlo_tm_bar {
-            background-image: linear-gradient(-45deg, rgba(255, 255, 255, 1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+            background-image: linear-gradient(
+                -45deg,
+                rgba(255, 255, 255, 1) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 1) 50%,
+                rgba(255, 255, 255, 1) 75%,
+                transparent 75%,
+                transparent
+            );
             -webkit-animation: arlo_tm_bar_move 4s linear infinite;
             -moz-animation: arlo_tm_bar_move 4s linear infinite;
             animation: arlo_tm_bar_move 4s linear infinite;
@@ -1438,14 +1461,14 @@ img.svg {
                     clear: both;
                     float: left;
                     position: relative;
-                    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
                     padding: 40px 40px 33px 40px;
                     top: 0px;
-                    -webkit-transition: all .3s ease;
-                    -moz-transition: all .3s ease;
-                    -ms-transition: all .3s ease;
-                    -o-transition: all .3s ease;
-                    transition: all .3s ease;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -ms-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
                     -webkit-box-sizing: border-box;
                     -moz-box-sizing: border-box;
                     box-sizing: border-box;
@@ -1530,7 +1553,7 @@ img.svg {
                 left: 100%;
             }
 
-            >span {
+            > span {
                 color: $color_9;
                 font-family: $font-family_1;
                 font-size: 14px;
@@ -1552,7 +1575,7 @@ img.svg {
             color: $color_8;
             margin-bottom: 10px;
 
-            >span {
+            > span {
                 font-size: 40px;
                 font-weight: 700;
             }
@@ -1617,11 +1640,11 @@ img.svg {
             display: inline-block;
             margin-bottom: 10px;
             position: relative;
-            -webkit-transition: all .1s ease;
-            -moz-transition: all .1s ease;
-            -ms-transition: all .1s ease;
-            -o-transition: all .1s ease;
-            transition: all .1s ease;
+            -webkit-transition: all 0.1s ease;
+            -moz-transition: all 0.1s ease;
+            -ms-transition: all 0.1s ease;
+            -o-transition: all 0.1s ease;
+            transition: all 0.1s ease;
         }
 
         a.current {
@@ -1637,7 +1660,7 @@ img.svg {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    >li {
+    > li {
         width: 33.3333%;
         float: left;
         position: relative;
@@ -1793,11 +1816,11 @@ img.svg {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    >ul.total {
+    > ul.total {
         margin: 0px 0px 0px -30px;
         list-style-type: none;
 
-        >li {
+        > li {
             margin: 0px 0px 30px 0px;
             float: left;
             width: 33.3333%;
@@ -1894,11 +1917,11 @@ img.svg {
                 text-transform: uppercase;
                 position: relative;
                 margin-left: 23px;
-                -webkit-transition: all .3s ease;
-                -moz-transition: all .3s ease;
-                -ms-transition: all .3s ease;
-                -o-transition: all .3s ease;
-                transition: all .3s ease;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
 
                 &:hover {
                     color: $color_3;
@@ -1936,11 +1959,11 @@ img.svg {
                 color: $color_4;
                 font-size: 22px;
                 display: block;
-                -webkit-transition: all .3s ease;
-                -moz-transition: all .3s ease;
-                -ms-transition: all .3s ease;
-                -o-transition: all .3s ease;
-                transition: all .3s ease;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
 
                 &:hover {
                     color: $color_3;
@@ -1979,7 +2002,7 @@ img.svg {
                 width: 0%;
                 background-color: $background-color_2;
                 transform: skew(50deg);
-                transition-duration: .6s;
+                transition-duration: 0.6s;
                 z-index: 1;
             }
 
@@ -2013,11 +2036,11 @@ img.svg {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transition: all .2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 
     .definitions_wrap {
         width: 100%;
@@ -2062,11 +2085,11 @@ img.svg {
                 text-transform: uppercase;
                 position: relative;
                 margin-left: 23px;
-                -webkit-transition: all .3s ease;
-                -moz-transition: all .3s ease;
-                -ms-transition: all .3s ease;
-                -o-transition: all .3s ease;
-                transition: all .3s ease;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
 
                 &:hover {
                     color: $color_6;
@@ -2166,11 +2189,11 @@ img.svg {
                     position: relative;
                     font-family: $font-family_2;
                     font-weight: 600;
-                    -webkit-transition: all .3s ease;
-                    -moz-transition: all .3s ease;
-                    -ms-transition: all .3s ease;
-                    -o-transition: all .3s ease;
-                    transition: all .3s ease;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -ms-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
 
                     &:hover {
                         color: $color_6;
@@ -2384,7 +2407,7 @@ img.svg {
                 width: 0%;
                 background-color: $background-color_2;
                 transform: skew(50deg);
-                transition-duration: .6s;
+                transition-duration: 0.6s;
                 z-index: 1;
             }
 
@@ -2451,18 +2474,18 @@ img.svg {
     right: 55px;
     z-index: 100;
     overflow: hidden;
-    outline: 1px solid rgba(255, 255, 255, .2);
+    outline: 1px solid rgba(255, 255, 255, 0.2);
     background-color: $background-color_3;
     padding: 22px;
     border-radius: 3px;
     display: inline-block;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 
     &:before {
         position: absolute;
@@ -2473,7 +2496,7 @@ img.svg {
         width: 0%;
         background-color: $background-color_2;
         transform: skew(50deg);
-        transition-duration: .6s;
+        transition-duration: 0.6s;
         z-index: 1;
     }
 
@@ -2481,7 +2504,7 @@ img.svg {
         width: 0px;
         height: 0px;
         position: absolute;
-        content: '';
+        content: "";
         border: 5px solid transparent;
         border-bottom-color: $border-bottom-color_1;
         top: 14px;
@@ -2512,7 +2535,7 @@ img.svg {
 .arlo_tm_universal_box_wrap.particle {
     height: 100vh;
     position: relative;
-    background-image: url(../img/hero/2.jpg);
+    background-image: url(../assets/img/hero/2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -2533,7 +2556,7 @@ img.svg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../img/hero/2.jpg);
+    background-image: url(../assets/img/hero/2.jpg);
     position: relative;
 
     .overlay {
@@ -2592,7 +2615,7 @@ img.svg {
         }
 
         .overlay_image.top {
-            background-image: url(../img/hero/2.jpg);
+            background-image: url(../assets/img/hero/2.jpg);
         }
 
         .overlay_color.top {
@@ -2680,7 +2703,7 @@ img.svg {
                 width: 0%;
                 background-color: $background-color_1;
                 transform: skew(50deg);
-                transition-duration: .6s;
+                transition-duration: 0.6s;
                 z-index: 1;
             }
 
@@ -2757,7 +2780,7 @@ img.svg {
                 box-sizing: border-box;
                 position: relative;
                 overflow: hidden;
-                box-shadow: 0px 5px 40px -8px rgba(0, 0, 0, .1);
+                box-shadow: 0px 5px 40px -8px rgba(0, 0, 0, 0.1);
                 padding-bottom: 20px;
 
                 .image_holder {
@@ -2784,11 +2807,11 @@ img.svg {
                             text-decoration: none;
                             color: $color_5;
                             font-family: $font-family_2;
-                            -webkit-transition: all .3s ease;
-                            -moz-transition: all .3s ease;
-                            -ms-transition: all .3s ease;
-                            -o-transition: all .3s ease;
-                            transition: all .3s ease;
+                            -webkit-transition: all 0.3s ease;
+                            -moz-transition: all 0.3s ease;
+                            -ms-transition: all 0.3s ease;
+                            -o-transition: all 0.3s ease;
+                            transition: all 0.3s ease;
 
                             &:hover {
                                 color: $color_13;
@@ -2824,11 +2847,11 @@ img.svg {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
-            -webkit-transition: all .3s ease;
-            -moz-transition: all .3s ease;
-            -ms-transition: all .3s ease;
-            -o-transition: all .3s ease;
-            transition: all .3s ease;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
 
             &:hover {
                 top: -5px;
@@ -2868,7 +2891,7 @@ img.svg {
             font-size: 50px;
             text-transform: uppercase;
             font-weight: 500;
-            letter-spacing: -.5px;
+            letter-spacing: -0.5px;
             line-height: 1;
             margin-bottom: 100px;
         }
@@ -2990,11 +3013,11 @@ img.svg {
             color: $color_7;
             font-weight: 600;
             font-size: 16px;
-            -webkit-transition: all .3s ease;
-            -moz-transition: all .3s ease;
-            -ms-transition: all .3s ease;
-            -o-transition: all .3s ease;
-            transition: all .3s ease;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
 
             &:hover {
                 color: $color_3;
@@ -3022,7 +3045,7 @@ img.svg {
         align-items: center;
         justify-content: space-between;
         background-color: $background-color_2;
-        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -3055,30 +3078,30 @@ img.svg {
             &::before {
                 background-color: $background-color_1;
                 width: 30px;
-                -webkit-transition: all .3s ease;
-                -moz-transition: all .3s ease;
-                -ms-transition: all .3s ease;
-                -o-transition: all .3s ease;
-                transition: all .3s ease;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
             }
 
             &::after {
                 background-color: $background-color_1;
                 width: 30px;
-                -webkit-transition: all .3s ease;
-                -moz-transition: all .3s ease;
-                -ms-transition: all .3s ease;
-                -o-transition: all .3s ease;
-                transition: all .3s ease;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
             }
 
             background-color: $background-color_1;
             width: 30px;
-            -webkit-transition: all .3s ease;
-            -moz-transition: all .3s ease;
-            -ms-transition: all .3s ease;
-            -o-transition: all .3s ease;
-            transition: all .3s ease;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
         }
     }
 
@@ -3128,11 +3151,15 @@ img.svg {
 
             &::after {
                 top: -16px;
-                transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+                transition: top 0.2s 0.2s
+                        cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+                    opacity 0.1s linear;
             }
 
             &::before {
-                transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                transition: top 0.12s 0.2s
+                        cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+                    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
             }
         }
     }
@@ -3146,13 +3173,16 @@ img.svg {
             &::after {
                 top: 0;
                 opacity: 0;
-                transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+                transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+                    opacity 0.1s 0.22s linear;
             }
 
             &::before {
                 top: 0;
                 transform: rotate(90deg);
-                transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+                transition: top 0.1s 0.16s
+                        cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+                    transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
             }
         }
     }
@@ -3194,8 +3224,8 @@ img.svg {
     background-color: $background-color_15;
     padding: 30px 20px;
     display: none;
-    border-bottom: 1px solid rgba(0, 0, 0, .09);
-    border-top: 1px solid rgba(0, 0, 0, .09);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    border-top: 1px solid rgba(0, 0, 0, 0.09);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -3209,11 +3239,11 @@ img.svg {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
 
-        >ul {
+        > ul {
             margin: 0px;
             list-style-type: none;
 
-            >li {
+            > li {
                 margin: 0px 0px 5px 0px;
 
                 &:last-child {
@@ -3226,6 +3256,10 @@ img.svg {
                     font-family: $font-family_2;
                     font-weight: 600;
                     font-size: 19px;
+
+                    &.active {
+                        color: $color_3;
+                    }
                 }
             }
         }
@@ -3258,8 +3292,8 @@ img.svg {
     }
 
     .arlo_tm_list_wrap {
-        >ul.total {
-            >li {
+        > ul.total {
+            > li {
                 width: 50%;
             }
         }
@@ -3411,16 +3445,16 @@ img.svg {
     }
 
     .arlo_tm_portfolio_list {
-        >li {
+        > li {
             width: 50%;
         }
     }
 
     .arlo_tm_list_wrap {
-        >ul.total {
+        > ul.total {
             margin: 0px;
 
-            >li {
+            > li {
                 width: 100%;
                 padding-left: 0px;
             }
@@ -3456,6 +3490,10 @@ img.svg {
                 font-size: 45px;
             }
         }
+    }
+
+    .arlo_tm_leftpart_wrap.opened {
+        display: none;
     }
 }
 
@@ -3501,7 +3539,7 @@ img.svg {
     .arlo_tm_portfolio_list {
         margin: 0px;
 
-        >li {
+        > li {
             width: 100%;
             padding-left: 0px;
         }
